@@ -243,3 +243,6 @@ $RECYCLE.BIN/
 
 # Archive files (ZIP archives should not be in repository)
 *.zip
+
+# Batch files (build scripts should not be in repository)
+*.bat
