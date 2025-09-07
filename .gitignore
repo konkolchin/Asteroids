@@ -240,3 +240,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Archive files (ZIP archives should not be in repository)
+*.zip
