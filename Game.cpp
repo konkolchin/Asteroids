@@ -594,24 +594,21 @@ void act(float dt)
                 
                 // Add points based on asteroid size
                 // Large asteroids give more points
-                if (asteroid.size > 25) {
-                    score += 100; // Large asteroids (split into 2 medium)
-                } else if (asteroid.size > 15) {
-                    score += 50;  // Medium asteroids (split into 2 small)
+                if (asteroid.size > 40) {
+                    score += 100; // Large asteroids
+                } else if (asteroid.size > 25) {
+                    score += 50;  // Medium asteroids
                 } else {
-                    score += 20;  // Small asteroids (no splitting)
+                    score += 20;  // Small asteroids
                 }
                 
                 // Create smaller asteroids if asteroid is big enough
-                if (asteroid.size > 20) { // Split if larger than 20 pixels
+                if (asteroid.size > 15) { // Split if larger than 15 (was 20)
                     for (int i = 0; i < 2; i++) {
                         Asteroid newAsteroid;
                         newAsteroid.position = asteroid.position;
-                        newAsteroid.size = asteroid.size * 0.6f; // 60% of original size
-                        // Give new asteroids random velocity in different directions
-                        float angle = (float)(rand() % 360) * 3.14159f / 180.0f;
-                        float speed = (float)(rand() % 100 + 50) / 3.0f; // Speed between 16-50 pixels/sec
-                        newAsteroid.velocity = Vector2(cosf(angle) * speed, sinf(angle) * speed);
+                        newAsteroid.size = asteroid.size * 0.6f;
+                        newAsteroid.velocity = Vector2((float)(rand() % 200 - 100) / 3.0f, (float)(rand() % 200 - 100) / 3.0f);
                         newAsteroid.active = true;
                         asteroids.push_back(newAsteroid);
                     }

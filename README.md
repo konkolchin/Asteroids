@@ -1,4 +1,4 @@
-\\\# Asteroids Game
+# Asteroids Game
 
 Simple Asteroids game implementation in C++.
 
@@ -27,11 +27,8 @@ Destroy all asteroids to win. Don't crash into them.
 
 ## Features
 
-- 3 lives (like original 1979 game)
-- Score system:
-  - Large asteroids (>25px): 100 points
-  - Medium asteroids (15-25px): 50 points  
-  - Small asteroids (<15px): 20 points
-- Asteroid splitting: Large asteroids split into 2 medium ones when destroyed
-- Screen wrapping (objects wrap around screen edges)
-- Pixel-based graphics with custom rendering
+- 3 lives
+- Score system
+- Asteroid splitting
+- Screen wrapping
+- Pixel graphics
