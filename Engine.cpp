@@ -167,7 +167,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   rect.bottom = SCREEN_HEIGHT;
   AdjustWindowRectEx(&rect, WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU, FALSE, 0);
 
-  HWND hwnd = CreateWindowA(wcex.lpszClassName, "Game", WS_OVERLAPPED | WS_MINIMIZEBOX | WS_SYSMENU,
+  HWND hwnd = CreateWindowA(wcex.lpszClassName, "Asteroids", WS_OVERLAPPED | WS_MINIMIZEBOX | WS_SYSMENU,
     CW_USEDEFAULT, 0, rect.right - rect.left, rect.bottom - rect.top, nullptr, nullptr, hInstance, nullptr);
 
   if (!hwnd)

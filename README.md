@@ -4,7 +4,7 @@ Simple Asteroids game implementation in C++.
 
 ## How to Play
 
-- **Arrow Keys**: Turn left/right
+- **Arrow Keys**: Turn left/right (0.2 radians per press)
 - **Up Arrow**: Accelerate
 - **Down Arrow**: Slow down
 - **Spacebar**: Shoot

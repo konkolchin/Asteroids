@@ -512,12 +512,12 @@ void act(float dt)
     
     // Ship controls
     if (player.alive) {
-        // Turn left and right (very fast rotation)
+        // Turn left and right (fixed angle per key press)
         if (is_key_pressed(VK_LEFT)) {
-            player.angle -= 20.0f * dt; // 20 radians per second (very fast!)
+            player.angle -= 0.2f; // 0.2 radians per key press
         }
         if (is_key_pressed(VK_RIGHT)) {
-            player.angle += 20.0f * dt; // 20 radians per second (very fast!)
+            player.angle += 0.2f; // 0.2 radians per key press
         }
         
         // Forward acceleration
